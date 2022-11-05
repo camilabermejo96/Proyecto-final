@@ -1,0 +1,11 @@
+{% extends "blog/madre.html" %}
+
+{% load static %}
+
+{% block contenidoUno %}
+
+<form action="/blog/buscar-editorial" method="GET">
+    <p><input type="text" name="nombre" id="nombre"></p>
+    <input type="submit" value="Ir a buscar!">
+</form>
+{% endblock %}

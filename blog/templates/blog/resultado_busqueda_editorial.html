@@ -1,0 +1,11 @@
+<p>Estamos buscando la editorial: {{ nombre }}</p>
+
+{% if editoriales_encontrados %}
+
+<ul>
+{% for editorial in editoriales_encontrados %}
+    <li>{{editorial.nombre}}</li>
+{% endfor %}
+</ul>
+
+{% endif %}

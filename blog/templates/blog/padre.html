@@ -1,0 +1,24 @@
+<a href="{% url 'autor-lista' %}">Mis Autores</a>
+<a href="{% url 'AutorNew' %}">Agregar Autor</a>
+{% if not request.user.is_authenticated %}
+    <a href="{% url 'Login' %}">Login</a>
+{% endif %}
+
+{% if request.user.is_authenticated %}
+    <a href="{% url 'Logout' %}">Logout</a>
+{% endif %}
+
+{% if request.user.is_authenticated %}
+    <p><a href="{% url 'EditarPerfil' %}">Editar Perfil</a></p>
+    <p><a href="{% url 'Logout' %}">Logout</a></p>
+    <p><a href="{% url 'AgregarAvatar' %}">Agregar Avatar</a></p>
+    {% if avatar %}
+        <img height="40px" src="{{ avatar }}"/>
+    {% endif %}
+    <p> Hola, {{ user.username }} !!</p>
+{% endif %}
+
+<br>
+<br>
+{% block contenidoUno %}
+{% endblock %}

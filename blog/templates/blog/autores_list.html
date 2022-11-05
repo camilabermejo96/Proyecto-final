@@ -1,0 +1,20 @@
+{% extends "blog/padre.html" %}
+{% block contenidoUno %}
+<div>
+<h1>Autores - Python </h1>
+<ul>
+    {% for autor in object_list %}
+    
+    <li>
+        <p>Nombre: {{ autor.nombre }} {{ autor.apellido }} </p>
+                <a href="{% url 'AutorDetail' autor.id %}">Ver autor</a>
+                <a href="{% url 'AutorUpdate' autor.id %}">Editar</a>
+                <a href="{% url 'AutorDelete' autor.id %}">Borrar</a>
+        </p>
+        
+    </li>
+    {% endfor %}
+</ul>
+
+</div>
+{% endblock %}

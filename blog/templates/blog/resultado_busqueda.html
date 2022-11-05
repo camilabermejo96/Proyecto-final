@@ -1,0 +1,11 @@
+<p>Estamos buscando al autor: {{ nombre }}</p>
+
+{% if autores_encontrados %}
+
+<ul>
+{% for autor in autores_encontrados %}
+    <li>{{autor.nombre}} ( {{autor.apellido}})</li>
+{% endfor %}
+</ul>
+
+{% endif %}

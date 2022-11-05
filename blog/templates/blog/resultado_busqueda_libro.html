@@ -1,0 +1,11 @@
+<p>Estamos buscando al libro: {{ titulo }}</p>
+
+{% if libros_encontrados %}
+
+<ul>
+{% for libro in libros_encontrados %}
+    <li>{{libro.titulo}} ( {{libro.genero}})</li>
+{% endfor %}
+</ul>
+
+{% endif %}

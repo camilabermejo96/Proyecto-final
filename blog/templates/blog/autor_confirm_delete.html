@@ -1,0 +1,9 @@
+{% extends "blog/padre.html" %}
+{% block contenidoUno %}
+<form action="" method="POST">
+    {% csrf_token %}
+    Estás seguro de que querés borrar el autor: <strong>{{ object }}</strong> ?
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

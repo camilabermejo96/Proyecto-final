@@ -1,0 +1,16 @@
+<a href="{% url 'editorial-lista' %}">Mis Editoriales</a>
+<a href="{% url 'EditorialNew' %}">Agregar Editorial</a>
+{% if not request.user.is_authenticated %}
+    <a href="{% url 'Login' %}">Login</a>
+{% endif %}
+
+{% if request.user.is_authenticated %}
+    <a href="{% url 'Logout' %}">Logout</a>
+{% endif %}
+
+
+
+<br>
+<br>
+{% block contenidoUno %}
+{% endblock %}

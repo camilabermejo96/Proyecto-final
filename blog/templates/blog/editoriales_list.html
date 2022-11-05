@@ -1,0 +1,22 @@
+{% extends "blog/padre3.html" %}
+{% block contenidoUno %}
+<div>
+<h1>Editoriales - Python </h1>
+<ul>
+    {% for editorial in object_list %}
+    
+    <li>
+        <p>Nombre: {{ editorial.nombre }}</p>
+        <a href="{% url 'EditorialDetail' editorial.id %}">Ver editorial</a>
+        <a href="{% url 'EditorialUpdate' editorial.id %}">Editar</a>
+        <a href="{% url 'EditorialDelete' editorial.id %}">Borrar</a>
+        
+        </p>
+        
+        </p>
+        
+    </li>
+    {% endfor %}
+</ul>
+</div>
+{% endblock %}
